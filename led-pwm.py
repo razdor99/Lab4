@@ -8,7 +8,7 @@ b = data.getvalue('option')
 s1 = data.getvalue('slider1')
 
 with open('led-pwm.txt', 'w') as f:  
-  f.write(str(s1))
+  f.write(str(s1,b))
 
 print('Content-type: text/html\n\n')
 print('<html>')
