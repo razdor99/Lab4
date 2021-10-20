@@ -26,11 +26,11 @@ while True:
   with open('led-pwm.txt', 'r') as f:
     dutyCycle = float(f.read()) # read duty cycle value from file
   with open('led-pwm1.txt', 'r') as d:
-    button = d.read()
-  if button == "a":
+    button = float(d.read())
+  if button == 1:
     pwm1.ChangeDutyCycle(dutyCycle)
-  if button == "b":
+  if button == 2:
     pwm2.ChangeDutyCycle(dutyCycle)
-  if button == "c":
+  if button == 3:
     pwm3.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
