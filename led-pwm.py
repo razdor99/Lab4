@@ -1,9 +1,7 @@
 #!/usr/bin/python37all
 import cgi
 
-print("Content-type: text/html\n\n")
-button = cgi.FieldStorage()
-print("selection = " + button.getvalue("option"))
+
 
 data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
