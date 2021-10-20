@@ -1,10 +1,10 @@
 #!/usr/bin/python37all
 import cgi
-
+import cgitb
+cgitb.enable()
 
 data1 = cgi.FieldStorage()
 b = data1.getvalue("option")
-
 
 data2 = cgi.FieldStorage()
 s1 = data2.getvalue('slider1')
