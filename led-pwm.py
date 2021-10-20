@@ -3,11 +3,9 @@ import cgi
 import cgitb
 cgitb.enable()
 
-data1 = cgi.FieldStorage()
-b = data1.getvalue('option')
-
-data2 = cgi.FieldStorage()
-s1 = data2.getvalue('slider1')
+data = cgi.FieldStorage()
+b = data.getvalue('option')
+s1 = data.getvalue('slider1')
 
 with open('led-pwm.txt', 'w') as f:  
   f.write(str(s1))
