@@ -15,7 +15,7 @@ pwm = GPIO.PWM(ledPin, 100) # PWM object on our pin at 100 Hz
 pwm.start(0) # start with LED off
 
 while True:
-  with open("led-pwm.txt", 'r') as file:
+  with open('led-pwm.txt', 'r') as file:
     dutyCycle = float(file.read()) # read duty cycle value from file
   pwm.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
