@@ -8,8 +8,9 @@ b = data.getvalue('option')
 s1 = data.getvalue('slider1')
 
 with open('led-pwm.txt', 'w') as f:  
-  f.write(str(s1,b))
-
+  f.write(str(s1))
+with open('led-pwm1.txt', 'w') as d:  
+  d.write(str(b))
 print('Content-type: text/html\n\n')
 print('<html>')
 print('<form action="/cgi-bin/led-pwm.py" method="POST">')
